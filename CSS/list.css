@@ -1,0 +1,22 @@
+.listButton{
+    display: flex;
+    flex-basis: 12%;
+    height: 32px;
+    background-color: teal; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-self: self-end;
+    margin-right: 10px;  
+}
+
+@media ( max-width: 768px) {
+
+    .listButton{
+        margin: 20px 20px 0px 20px;
+        flex-basis: 100%;
+    }
+}
