@@ -7,9 +7,11 @@
         for (const task of tasks) {
             htmlString += `
             <li
-             ${task.done ? "style=\"text-decoration: line-through\"" : ""}
+            ${task.done ? "style=\"text-decoration: line-through\"" : ""}
             >
+            <button class="listButton--check">check</button>
             ${task.content}
+            <button class="listButton--delate">delate</button>
             </li>`
         }
         document.querySelector(".js-list").innerHTML = htmlString;
