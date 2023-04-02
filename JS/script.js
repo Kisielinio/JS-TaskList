@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "zrobić zadanie",
-            done: false,
-        },
-        {
-            content: "przesłuchać moduł",
-            done: true,
-        },
-    ];
+    const tasks =  [];
 
     const render = () => {
         let htmlString = "";
@@ -43,14 +34,21 @@
         addNewTask(newTaskContent);
     }
 
+    const clearFrom = (newTaskContent) => {
+        newTaskContent.forEach(newTaskContent => newTaskContent.value = " ");
+
+    };             
+
 
 
     const init = () => {
         render();
 
         const form = document.querySelector(".js-form");
+        const button = document.querySelector(".js-button");
 
         form.addEventListener("submit", onFormSubmit);
+        button.addEventListener("click", clearFrom);
     };
 
     init();

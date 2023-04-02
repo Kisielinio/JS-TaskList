@@ -16,3 +16,9 @@
         margin-left: 2px;
     }
 }
+
+    @media   (min-width: 769px),  ( max-width: 1119px) {
+        .container{
+            margin-left: 150px;
+        }
+}
