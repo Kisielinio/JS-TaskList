@@ -6,13 +6,15 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li
-            ${task.done ? "style=\"text-decoration: line-through\"" : ""}
-            >
-            <button class="listButton--check">check</button>
-            ${task.content}
-            <button class="listButton--delate">delate</button>
-            </li>`
+            <li class="list__item">
+            <button class="list__buttonDone"> ${task.done ? "✔" : ""}</button>
+            <span class="list__content
+              ${task.done ? " list__content--done" : ""}">
+              ${task.content}
+            </span>
+            <button class="list__buttonRemove">🗑</button>
+            </li>
+            `;
         }
         document.querySelector(".js-list").innerHTML = htmlString;
     };
@@ -27,30 +29,25 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
 
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
 
-        addNewTask(newTaskContent);
+        newTaskElement.focus();
     }
 
-    const clearFrom = (newTaskContent) => {
-        newTaskContent.forEach(newTaskContent => newTaskContent.value = " ");
-
-    };             
-
-
+            
 
     const init = () => {
         render();
 
         const form = document.querySelector(".js-form");
-        const button = document.querySelector(".js-button");
 
-        form.addEventListener("submit", onFormSubmit);
-        button.addEventListener("click", clearFrom);
+        form.addEventListener("submit", onFormSubmit);       
     };
 
     init();

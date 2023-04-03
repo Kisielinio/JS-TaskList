@@ -1,11 +1,47 @@
-.listButton--check{
-    margin-right: 50px;
+.list__buttonDone{
     display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: lime;
     justify-content: flex-start;
+    border: none;
 };
 
-.listButton--delate{
-    margin-left: 20px;
+.list__buttonDone:hover {
+    border: 1px solid rgb(33, 33, 33);
+}
+
+.list__buttonDone:active {
+    border: 2px solid rgb(33, 33, 33);
+}
+
+.list__buttonRemove{
     display: flex;
-    justify-content: flex-end;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    justify-content: flex-end; 
 };
+
+.list__buttonRemove:hover {
+    border: 1px solid rgb(33, 33, 33);
+}
+
+.list__buttonRemove:active {
+    border: 2px solid rgb(33, 33, 33);
+}
+
+.list__item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.list__content{
+    padding: 20px;
+}
+
+.list__content--done{
+    text-decoration: line-through;
+}

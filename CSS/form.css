@@ -4,7 +4,7 @@
     background-color: white;
 }
 
-.formTask{
+.form__task{
     display: flex;
     align-items:center;
     flex-basis: 100%;
@@ -21,9 +21,10 @@
 
 .form__list{
     padding: 10px 0px 20px 20px;
+    list-style-type: none;
 }
 
-.formButton{
+.form__button{
     display: flex;
     flex-basis: 12%;
     height: 32px;
@@ -44,11 +45,11 @@
         flex-wrap: wrap;
     }
 
-    .formTask{
+    .form__task{
         flex-basis: 100%; 
     }
 
-    .formButton{
+    .form_button{
         margin: 20px 20px 0px 20px;
         flex-basis: 100%;
     }
