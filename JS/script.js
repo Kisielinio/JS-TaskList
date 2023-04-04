@@ -1,30 +1,56 @@
 {
     const tasks =  [];
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li class="list__item">
-            <button class="list__buttonDone"> ${task.done ? "✔" : ""}</button>
-            <span class="list__content
-              ${task.done ? " list__content--done" : ""}">
-              ${task.content}
-            </span>
-            <button class="list__buttonRemove">🗑</button>
-            </li>
-            `;
-        }
-        document.querySelector(".js-list").innerHTML = htmlString;
-    };
-
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
         render();
     }
+
+    const taskRemove = (index) => {
+        tasks.splice(index,1);
+                render();
+    }
+
+    const toggleDoneTask = (index) => {
+        tasks[index].done = !tasks[index].done;
+        render();
+    }
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li class="list__item">
+            <button class="list__buttonDone js-done"> ${task.done ? "✔" : ""}</button>
+            <strong class="list__content ${task.done ? "list__content--done" : ""}"
+            >
+            ${task.content}
+            </strong>
+            <button class="list__buttonRemove js-remove">🗑</button>
+            </li>
+            `;
+        }
+        document.querySelector(".js-list").innerHTML = htmlString;
+
+        const buttonRemove = document.querySelectorAll(".js-remove");
+        
+        buttonRemove.forEach((buttonRemove, index) => {
+            buttonRemove.addEventListener("click", () => {
+                taskRemove(index);
+            })
+        });
+
+        const toggleDone = document.querySelectorAll(".js-done");
+        
+        toggleDone.forEach((toggleDone, index) => {
+            toggleDone.addEventListener("click", () => {
+                toggleDoneTask(index);
+            })
+        });
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
