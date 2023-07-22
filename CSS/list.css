@@ -1,37 +1,68 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    color: teal;
+    border: none;
+    margin: 0 0 0 20px;
+    transition: 1s;
+}
+
+.list__buttons:hover {
+    color: hsl(180, 100%, 35%)
+}
+
+.list__buttons:active {
+    color: hsl(180, 100%, 45%)
+}
+
+.list__buttons:disabled {
+    color: #ccc;
+}
+
 .list__buttonDone{
     display: flex;
     width: 40px;
     height: 40px;
-    background-color: lime;
+    background-color: hsl(120, 100%, 25%);
     justify-content: center;
     align-items: center;
     border: none;
+    transition: 1s;
 };
 
 .list__buttonDone:hover {
-    border: 1px solid rgb(33, 33, 33);
+    background-color: hsl(120, 100%, 50%);
+    
 }
 
 .list__buttonDone:active {
-    border: 2px solid rgb(33, 33, 33);
+    background-color: hsl(120, 100%, 35%);
 }
 
 .list__buttonRemove{
     display: flex;
     width: 40px;
     height: 40px;
-    background-color: red;
-    border: none;
+    background-color: hsl(348, 83%, 47%);
+    justify-content: center;
     align-items: center;
-    justify-content: center
+    border: none;
+    transition: 1s;
+    
 };
 
 .list__buttonRemove:hover {
-    border: 1px solid rgb(33, 33, 33);
+    background-color:hsl(348, 83%, 52%);
 }
 
 .list__buttonRemove:active {
-    border: 2px solid rgb(33, 33, 33);
+    background-color:hsl(348, 83%, 57%);
 }
 
 .list__item{
@@ -41,6 +72,11 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list__item--hidden{
+    display: none;
 }
 
 .list__content{
