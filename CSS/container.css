@@ -4,6 +4,7 @@
     margin-top: 50px;
     margin: auto;
     align-items: center;
+    word-break: break-word;
  }
  
  .container__list{
