@@ -1,7 +1,7 @@
 # JS-TaskList
+## DEMO
 
 ![Alt text](image.png)
-## DEMO
 ## Link: https://kisielinio.github.io/JS-TaskList/
 
 The page is used to create a task list.
