@@ -1,11 +1,5 @@
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .list__buttons{
-    display: flex;
-    flex-wrap: wrap;
     background-color: transparent;
     color: teal;
     border: none;
@@ -77,10 +71,6 @@
 
 .list__item--hidden{
     display: none;
-}
-
-.list__content{
-    padding: 20px;
 }
 
 .list__content--done{

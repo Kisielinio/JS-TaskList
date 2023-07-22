@@ -4,6 +4,12 @@
     background-color: white;
 }
 
+.form__header{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ebebeb;
+}
+
 .form__task{
     display: flex;
     align-items:center;
@@ -12,12 +18,32 @@
     padding: 5px 0px 5px 0px;
 }
 
-.form__title{
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ebebeb;
+.formHiden__buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
+.form__title{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;;
+}
+
+@media(max-width: 767px) {
+    .form__title {
+        grid-template-columns: 1fr;
+    }
+    
+    .formHiden__buttons{
+        flex-direction: column;
+    }
+    
+}
 
 .form__list{
     padding: 10px 0px 20px 20px;
