@@ -30,13 +30,13 @@
     transition: 1s;
 };
 
-.list__buttonDone:hover {
-    background-color: hsl(120, 100%, 50%);
-    
+.list__buttonDone:active {
+    background-color: hsl(120, 100%, 29%);
 }
 
-.list__buttonDone:active {
-    background-color: hsl(120, 100%, 35%);
+.list__buttonDone:hover {
+    background-color: hsl(120, 100%, 30%);
+    
 }
 
 .list__buttonRemove{
@@ -51,12 +51,12 @@
     
 };
 
-.list__buttonRemove:hover {
-    background-color:hsl(348, 83%, 52%);
-}
-
 .list__buttonRemove:active {
     background-color:hsl(348, 83%, 57%);
+}
+
+.list__buttonRemove:hover {
+    background-color:hsl(348, 83%, 52%);
 }
 
 .list__item{
