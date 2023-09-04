@@ -63,6 +63,7 @@
     font-size: 13px;
     align-self: flex-end;
     margin-right: 10px;  
+    transition-duration: 0.5s, 0.5s;
 }
 
 .form__button:hover {
